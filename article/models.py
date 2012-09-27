@@ -9,6 +9,7 @@ class Article(models.Model):
 	)
 	subject = models.CharField(max_length=200)	
 	name = models.CharField(max_length=200)
+	author = models.CharField(blank=True, max_length=200)
 	company = models.CharField(blank=True, max_length=200)
 	title = models.CharField(blank=True, max_length=200)
 	content = models.TextField()
