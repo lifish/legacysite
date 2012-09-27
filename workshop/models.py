@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-Class Workshop(models.Model):
+class Workshop(models.Model):
 	WORKSHOP_TYPE = (
 		('ST','step'),
 		('CO','core'),
