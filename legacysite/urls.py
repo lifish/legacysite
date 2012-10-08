@@ -16,4 +16,5 @@ urlpatterns = patterns('',
 	url(r'^admin/', include(admin.site.urls)),
 	# for test 
 	url(r'^$', 'article.views.temp'),
+	(r'^ckeditor/', include('ckeditor.urls')),
 )

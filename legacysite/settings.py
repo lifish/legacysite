@@ -30,7 +30,7 @@ TIME_ZONE = 'Asia/Taipei ROC'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
-SITE_ID = 1
+SITE_ID = 2
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -56,7 +56,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = 'E:\codes\Python\legacysite\static'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -67,6 +67,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    'E:/codes/Python/cktest/media',
 )
 
 # List of finder classes that know how to find static files in
@@ -108,6 +109,25 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+# file. This setting specifies a URL prefix to the ckeditor JS and CSS media (not uploaded media).
+CKEDITOR_MEDIA_PREFIX = "/static/ckeditor/"
+# This setting specifies an absolute path to your ckeditor media upload directory. Make sure you have write permissions for the path
+CKEDITOR_UPLOAD_PATH = "E:/codes/Python/cktest/media/media.lawrence.com/uploads"
+# Optionally, add a CKEDITOR_UPLOAD_PREFIX setting to the project's settings.py file. This setting specifies a URL prefix to media uploaded through ckeditor,
+CKEDITOR_UPLOAD_PREFIX = "/media/media.lawrence.com/media/uploads/"
+# Optionally, add CKEDITOR_CONFIGS setting to the project's settings.py file. This specifies sets of CKEditorWidget settings that are passed to CKEditor
+CKEDITOR_CONFIGS = {
+	'default': {
+		'toolbar': "Full",
+		'width': 1000,
+		'height': 300,
+		'toolbarCancollapse': False,
+	},
+	'awesome_ckeditor': {
+		'toolbar': 'Basic',
+	},
+}
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,6 +142,7 @@ INSTALLED_APPS = (
     'article',
     'news',
     'workshop',
+    'ckeditor',
 )
 
 # A sample logging configuration. The only tangible logging
